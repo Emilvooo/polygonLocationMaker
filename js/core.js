@@ -55,7 +55,7 @@ var app = {
                 strokeWeight: 2
             });
 
-            function.setMap(app.maps.canvas);
+            housesPath.setMap(app.maps.canvas);
         }
     }
 };
