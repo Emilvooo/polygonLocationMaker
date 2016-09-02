@@ -10,7 +10,7 @@ class Db {
     public function databaseConnection()
     {
         try {
-            $this->connection = new PDO("mysql:host=localhost;dbname=playground", "root", "mysql");
+            $this->connection = new PDO("mysql:host=localhost;dbname=playground", "", "");
         } catch (PDOException $e) {
             $this->connection = print "Error!: " . $e->getMessage() . "<br/>";
             die();
