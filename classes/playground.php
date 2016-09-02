@@ -1,5 +1,5 @@
 <?php
-class playground extends Db {
+class Playground extends Db {
     public $locations = array();
 
     public function __construct()
@@ -10,8 +10,7 @@ class playground extends Db {
 
     private function getLocations()
     {
-        $query = $this->connection->query('SELECT * FROM adress');
-        $result = $query->fetchAll(\PDO::FETCH_ASSOC);
-        $this->locations = $result;
+        $query = $this->connection->query('SELECT * FROM locations');
+        $this->locations = $query->fetchAll(\PDO::FETCH_ASSOC);
     }
 }
