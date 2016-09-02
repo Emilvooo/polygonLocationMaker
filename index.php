@@ -1,3 +1,7 @@
+<?php
+include_once 'autloader.php';
+$playground = new playground();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +15,12 @@
     <div id="maps"></div>
 
     <div id="locations">
-        <span data-lat="52.833936" data-lng="6.373611" data-title="Berenderweg 14" data-num="14"></span>
-        <span data-lat="52.833905" data-lng="6.374292" data-title="Berenderweg 18" data-num="18"></span>
-        <span data-lat="52.833811" data-lng="6.375349" data-title="Berenderweg 30" data-num="30"></span>
+        <?php
+        foreach ($playground->locations as $location) {
+            $title = explode(' ', $location['title']);
+            echo '<span data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'" data-title="'.$location['title'].'" data-num="'.end($title).'"></span>';
+        }
+        ?>
     </div>
 
     <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
