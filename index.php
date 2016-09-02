@@ -1,6 +1,6 @@
 <?php
 include_once 'library/autloader.php';
-$playground = new Playground();
+$polygonLocationMaker = new polygonLocationMaker();
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@ $playground = new Playground();
 
     <div id="locations">
         <?php
-        foreach ($playground->locations as $location) {
+        foreach ($polygonLocationMaker->locations as $location) {
             $title = explode(' ', $location['title']);
             echo '<span data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'" data-title="'.$location['title'].'" data-num="'.end($title).'" data-color="'.$location['color'].'"></span>';
         }

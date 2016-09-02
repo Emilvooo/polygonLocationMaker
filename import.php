@@ -1,9 +1,9 @@
 <?php
 include_once 'library/autloader.php';
-$playground = new Playground();
+$polygonLocatioMaker = new polygonLocationMaker();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $playground->importLocations($_POST['locations']);
+    $polygonLocatioMaker->importLocations($_POST['locations']);
 }
 ?>
 <!DOCTYPE html>
