@@ -18,10 +18,10 @@ var app = {
                 var lng = $(this).attr('data-lng');
                 var title = $(this).attr('data-title');
                 var num = $(this).attr('data-num');
-                var colour = $(this).attr('data-colour');
+                var color = $(this).attr('data-color');
 
                 var loc = new google.maps.LatLng(lat, lng);
-                var icon_uri = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+num+'|'+colour+'|000000';
+                var icon_uri = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+num+'|'+color+'|000000';
 
                 var marker = new google.maps.Marker({
                     position: loc,

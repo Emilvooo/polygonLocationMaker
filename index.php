@@ -16,7 +16,7 @@ $playground = new Playground();
         <?php
         foreach ($playground->locations as $location) {
             $title = explode(' ', $location['title']);
-            echo '<span data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'" data-title="'.$location['title'].'" data-num="'.end($title).'" data-colour="'.$location['colour'].'"></span>';
+            echo '<span data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'" data-title="'.$location['title'].'" data-num="'.end($title).'" data-color="'.$location['color'].'"></span>';
         }
         ?>
     </div>
